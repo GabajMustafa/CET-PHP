@@ -4,7 +4,7 @@
  <body>
         <form action = "add.php" method = "POST">
             Enter Student Id <BR>
-            <input type = "text" name = "studentid" value ="" placeholder ="Student Id">
+            <input type = "text" name = "studentid" value ="" placeholder ="Student Id" required >
             <BR><BR>
             Enter Name <BR>
             <input type = "text" name = "studentname" value ="" 

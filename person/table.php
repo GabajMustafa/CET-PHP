@@ -8,7 +8,6 @@ if(isset($_GET['studentid']))
 {
     $studentid = $_GET['studentid'];
 }
-
 try {
     // We can use the PDO library to connect to 12 different types of database servers - 
     // such as a MySQL server, an Oracle server, or a Microsoft SQL Server.
@@ -42,6 +41,12 @@ catch(PDOException $Exception ) {
     </style>
 </head>
 <body>
+        <form method="get">
+            <label>Search By Id</label>
+            <input type="text" name="studentid">
+            <input type="submit" value="Search">
+        </form>
+        <br>
         <table border="1">
             <thead>
                 <tr>
@@ -78,7 +83,7 @@ catch(PDOException $Exception ) {
                             $id= $row[0]; 
                         ?>
                         <td><a href="edit.php?studentid=<?php echo $id ?>">Edit</a></td>
-                        <td><a href="delete.php">Delete</a></td>
+                        <td><a href="delete.php?studentid=<?php echo $id ?>">Delete</a></td>
                     </tr>
 
                 <?php  } ?>
